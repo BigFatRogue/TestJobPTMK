@@ -1,3 +1,5 @@
+# python 3.9.10
+
 from sys import argv
 from db import DataBaseAfterOptimization, Employee, EmployeeRandomGenerator
 
