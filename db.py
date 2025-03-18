@@ -2,8 +2,6 @@ import sqlite3
 from datetime import datetime   
 import string
 import random
-from time import time
-import timeit
 from siiting import *
 
 
@@ -180,31 +178,7 @@ class DataBaseAfterOptimization(Database):
         self.close()       
 
 
-if __name__ == '__main__':
-    db_after = DataBaseAfterOptimization()
-    db_before = DataBaseBeforeOptimization()
-    
-    # db_before.create_db()
-    # db_after.create_db()
 
-    # mode 4
-    gen = EmployeeRandomGenerator()
-    lst = gen.generate_epmployees(1_000_000, 200)
-    db_after.add_employees(lst)
-    db_before.add_employees(lst)
-
-    # mode 5
-    # def mode5():
-    #         query = """SELECT *
-    #         FROM employee_male
-    #         WHERE fullname LIKE 'F%' AND gender = 'Male'
-    #         """
-    #         db_before.query(query)
-
-    # execution_time = timeit.timeit(mode5, number=1)
-    # print(f"Время выполнения запроса: {execution_time:.4f} секунд")
-    # db_after.close()
-    
 
 
 

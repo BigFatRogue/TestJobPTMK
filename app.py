@@ -29,6 +29,7 @@ class App:
         DataBaseAfterOptimization().get_unuque()
     
     def mode_4(self):
+        print('Процесс создания 1_000_000 обычных пользователий и 100 специальных')
         gen = EmployeeRandomGenerator()
         lst = gen.generate_epmployees(count_radnom=1_000_000, count_special=100)
         DataBaseAfterOptimization().add_employees(lst)
